@@ -2,7 +2,7 @@
 
 # ====================================================
 #	System Request:Debian 8、9
-#	Author:moerats.com
+#	Author:moerats.com 魔改by:edifierdrew
 #	Aria2+Aria2Ng+OneIndex一键安装脚本
 # ====================================================
 
