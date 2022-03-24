@@ -87,6 +87,11 @@ nginx_install(){
 }
 
 php7_install(){
+	#该方法是使用第三方源添加php7.0
+	apt install apt-transport-https lsb-release ca-certificates
+	wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+	#install php7.0
         apt install php7.0-cgi php7.0-fpm php7.0-curl php7.0-gd -y
         if [[ $? -eq 0 ]];then
             echo -e "${OK} ${Blue} php7 安装成功 ${Font}"
@@ -213,7 +218,7 @@ port_exist_check(){
 OneIndex_install(){
     apt install git -y
     mkdir -p /home/wwwroot/${domain} && cd /home/wwwroot/${domain}
-	git clone https://github.com/david7207/oneindexMod.git && mv Oneindex/* ./
+	git clone https://github.com/david7207/oneindexMod.git && mv oneindex/* ./
          chmod -R 777 config/ cache/
     if [[ $? -eq 0 ]];then
         echo -e "${OK} ${Blue} OneIndex 下载成功 ${Font}"
