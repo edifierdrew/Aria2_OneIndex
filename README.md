@@ -1,6 +1,10 @@
 # Aria2_OneIndex
 backup of Aria2_OneIndex
 
+由于脚本内证书签发有点问题
+请在执行本脚本之前执行
+
+curl https://get.acme.sh | sh -s email=你的邮箱
 
 
 #本库存Aria2Ng_Oneindex魔改版脚本
