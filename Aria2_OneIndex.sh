@@ -218,7 +218,7 @@ port_exist_check(){
 OneIndex_install(){
     apt install git -y
     mkdir -p /home/wwwroot/${domain} && cd /home/wwwroot/${domain}
-	git clone git@github.com:edifierdrew/oneindex-h.git && mv oneindex-h/* ./
+	git clone https://github.com/edifierdrew/oneindex-h.git && mv oneindex-h/* ./
          chmod -R 777 config/ cache/
     if [[ $? -eq 0 ]];then
         echo -e "${OK} ${Blue} OneIndex 下载成功 ${Font}"
