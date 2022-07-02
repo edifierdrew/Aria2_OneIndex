@@ -2,6 +2,13 @@
 backup of Aria2_OneIndex
 
 
+
+##一键安装脚本
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/edifierdrew/Aria2_OneIndex/main/Aria2_OneIndex.sh" && chmod 700 /root/Aria2_OneIndex.sh &&  /root/Aria2_OneIndex.sh
+
+
+
+
 # 暂时发现的问题
 ## 1.由于脚本内证书签发有点问题
 ## 请在执行本脚本之前执行
