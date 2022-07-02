@@ -6,6 +6,14 @@
 #	Aria2+Aria2Ng+OneIndex一键安装脚本
 # ====================================================
 
+#Initialization for Global Variable
+initVar() {
+
+#Enter Your Email 
+Email=
+
+}
+
 #fonts color
 Green="\033[32m" 
 Red="\033[31m" 
@@ -173,8 +181,8 @@ ssl_install(){
         echo -e "${Error} ${Red} SSL 证书生成脚本依赖安装失败 ${Font}"
         exit 6
     fi
-
-    curl  https://get.acme.sh | sh
+    
+    curl  https://get.acme.sh | sh -s email=example@google.com
 
     if [[ $? -eq 0 ]];then
         echo -e "${OK} ${Blue} SSL 证书生成脚本安装成功 ${Font}"
